@@ -1,0 +1,82 @@
+{
+    "name": "Project",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "location": {
+        "type": "string"
+      },
+      "year": {
+        "type": "string"
+      },
+      "area": {
+        "type": "string"
+      },
+      "summary": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "cover_image": {
+        "type": "string"
+      },
+      "detail_image": {
+        "type": "string"
+      },
+      "gallery": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "scope": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "is_featured": {
+        "type": "boolean",
+        "default": false
+      },
+      "is_demonstration": {
+        "type": "boolean",
+        "default": true
+      },
+      "display_order": {
+        "type": "number",
+        "default": 0
+      }
+    },
+    "required": [
+      "title",
+      "slug"
+    ],
+    "rls": {
+      "read": {},
+      "create": {
+        "user_condition": {
+          "role": "admin"
+        }
+      },
+      "update": {
+        "user_condition": {
+          "role": "admin"
+        }
+      },
+      "delete": {
+        "user_condition": {
+          "role": "admin"
+        }
+      }
+    }
+  }

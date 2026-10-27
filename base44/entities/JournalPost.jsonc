@@ -1,0 +1,61 @@
+{
+    "name": "JournalPost",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string"
+      },
+      "slug": {
+        "type": "string"
+      },
+      "category": {
+        "type": "string"
+      },
+      "excerpt": {
+        "type": "string"
+      },
+      "body": {
+        "type": "string"
+      },
+      "cover_image": {
+        "type": "string"
+      },
+      "published_date": {
+        "type": "string",
+        "format": "date"
+      },
+      "read_time": {
+        "type": "string"
+      },
+      "is_sample": {
+        "type": "boolean",
+        "default": true
+      },
+      "display_order": {
+        "type": "number",
+        "default": 0
+      }
+    },
+    "required": [
+      "title",
+      "slug"
+    ],
+    "rls": {
+      "read": {},
+      "create": {
+        "user_condition": {
+          "role": "admin"
+        }
+      },
+      "update": {
+        "user_condition": {
+          "role": "admin"
+        }
+      },
+      "delete": {
+        "user_condition": {
+          "role": "admin"
+        }
+      }
+    }
+  }
